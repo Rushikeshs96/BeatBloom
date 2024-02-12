@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>BEATBLOOM player- Your favourite music is here</title>
-        <link rel="stylesheet" href="style.css">
-        </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEATBLOOM player- Your favourite music is here</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-    <nav>
-        <ul>
-            <li class="brand"><img src="logo.png" alt="BEATBLOOM">BEATBLOOM</li>
-            <li>Home</a></li>
-            <li>About</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li class="brand"><img src="logo.png" alt="BEATBLOOM">BEATBLOOM</li>
+        <li onclick="showHome()">Home</li>
+        <li onclick="showAbout()">About</li>
+    </ul>
+</nav>
 
+<div id="homeSection">
     <div class="container">
         <div class="songList">
             <h1>Best of all Genres-[English,Hindi]</h1>
@@ -87,7 +88,27 @@
             <img src="playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName">Warriyo - Mortals [NCS Release]</span>
         </div>
     </div>
-    <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+</div>
+
+<div id="aboutSection" style="display: none; text-align: center; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <h1>About Us</h1>
+    <p style="font-weight: bold; margin-top: 20px;">Made with love by Rushikesh Sapkal and Rohit Patil</p>
+</div>
+
+
+<script>
+    function showAbout() {
+        document.getElementById('homeSection').style.display = 'none';
+        document.getElementById('aboutSection').style.display = 'block';
+    }
+
+    function showHome() {
+        document.getElementById('homeSection').style.display = 'block';
+        document.getElementById('aboutSection').style.display = 'none';
+    }
+</script>
+
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
 </body>
 </html>
